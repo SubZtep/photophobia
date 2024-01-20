@@ -1,8 +1,15 @@
 import Webcam from "react-webcam"
-
-const { innerWidth: width, innerHeight: height } = window
+import useWindowDimensions from "./hooks/window-dimensions"
+import { useEffect } from "react"
 
 function App() {
+  const { height, width } = useWindowDimensions()
+
+  useEffect(() => {
+    // @ts-ignore
+    screen.orientation.lock("any")
+  }, [])
+
   return (
     <Webcam
       videoConstraints={{ facingMode: "environment" }}
