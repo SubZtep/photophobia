@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     // @ts-ignore
-    screen.orientation.lock("any")
+    screen.orientation?.lock("any")
   }, [])
 
   return (
