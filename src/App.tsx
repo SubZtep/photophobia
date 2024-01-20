@@ -1,14 +1,14 @@
 import Webcam from "react-webcam"
 import useWindowDimensions from "./hooks/window-dimensions"
-import { useEffect } from "react"
+// import { useEffect } from "react"
 
 function App() {
   const { height, width } = useWindowDimensions()
 
-  useEffect(() => {
-    // @ts-ignore
-    screen.orientation?.lock("any")
-  }, [])
+  // useEffect(() => {
+  //   // @ts-ignore
+  //   screen.orientation?.lock("any")
+  // }, [])
 
   return (
     <Webcam
